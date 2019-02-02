@@ -1,7 +1,7 @@
 # Welcome to StackEdit!
 
 Hi! I'm your
-![KXLV](../figs/KLXV.png)
+![KXLV](figs/KLXV.png)
 
 
   ![enter image description here](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png)
@@ -156,5 +156,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MzEwMjYwLC00MDk4OTk4NzJdfQ==
+eyJoaXN0b3J5IjpbODk5NTYwOTg1LC0zNDMxMDI2MCwtNDA5OD
+k5ODcyXX0=
 -->
