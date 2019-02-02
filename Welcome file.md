@@ -4,7 +4,7 @@ Hi! I'm your
 ![KXLV](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png)
 
 
-  
+  ![enter image description here](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png)
 ![map](file:///C:/Users/RAPP/Documents/Capstone/figs/KCCU_and_SNOTEL_map.png)
 
 
@@ -156,5 +156,5 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMjkzODcxNF19
+eyJoaXN0b3J5IjpbLTQwOTg5OTg3Ml19
 -->
