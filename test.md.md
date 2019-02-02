@@ -22,7 +22,7 @@ The Copper Mountain ski resort is unique as there is an official SNOTEL National
 
 A map showing the Copper Mountain SNOTEL site and the meteorological sites used in this assessment is also shown in **Figure 1**  
   
-**Insert Figure 1 - Map of Locations**  
+**Figure 1 - Map of Locations**  
   
 ![KXLV](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png)
   
@@ -135,6 +135,6 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationshps between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve preditive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MjM1MzQ3MywtNjk5ODA1MTM3LDc1OD
-cxMTQ4XX0=
+eyJoaXN0b3J5IjpbNjkwNDY1MTE0LDIxNDIzNTM0NzMsLTY5OT
+gwNTEzNyw3NTg3MTE0OF19
 -->
