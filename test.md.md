@@ -13,9 +13,6 @@ Complex terrain in mountainous areas often make predicting snowfall difficult wi
 The purpose of this report is to discuss data to be utilized and make general assessment regarding how well a predictive model might perform. 
 
 
-
-![test](figs/SNWD_12hrSNOWFALL_2005.png)
-
 ## Data
 The Copper Mountain ski resort is unique as there is an official SNOTEL National Resources Conservation Service monitoring station the north slope of Copper Mountain, where many popular ski runs are located. SNOTEL is an telemtry automated system of snowpack and related climate sensors in the Western United States. In addition to reporting hourly snowfall amounts, it also records temperature.  The Copper Mountain ski resort is also has an Colorado Department of Transportation Automated Weather Observing System (AWOS) which monitors a suite of hourly variables near the top of Copper Mountain.  Additionally, a National Weather Service Automated Surface Observing Station (ASOS) is located in Leadville, CO approximately 30 km to the northwest of Copper Mountain.  These three stations give a comprehensive meteorological dataset of surface variables in the vicinity of the Copper Mountain Resort.   **Table 1-1** gives a listing of all surface level meteorological variables by station. Hourly data for each station was downloaded for years 2005-2017 from online sources.  Data sources for each station are found in **Table 2**.  
 
@@ -135,6 +132,6 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationshps between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve preditive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkwNDY1MTE0LDIxNDIzNTM0NzMsLTY5OT
-gwNTEzNyw3NTg3MTE0OF19
+eyJoaXN0b3J5IjpbLTExOTUxMjYyODUsNjkwNDY1MTE0LDIxND
+IzNTM0NzMsLTY5OTgwNTEzNyw3NTg3MTE0OF19
 -->
