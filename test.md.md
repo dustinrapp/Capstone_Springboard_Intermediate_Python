@@ -10,7 +10,7 @@
 ***
 Complex terrain in mountainous areas often make predicting snowfall difficult with prognostic weather models - especially on specific slopes or mountainsides where extremely localized air flows may complicate such forecasts.  With accurate snow forecasts, ski resorts can optimize their snowfall making, grooming, and snow removal operations. An accurate short term snowfall forecast, even for a small segment of the mountain may likely assist a ski resort's operation.  The goal of this study is to get a glimpse into the potential of utilizing a supervised learning techniques with freely available surface and meteorological data to predict snowfall on a slope at Copper Mountain Ski Resort in Colorado.  Copper Mountain Ski Resort may be especially interested in such predictive models because of the unique access to government funded meteorological data being recorded near or onsite to their resort.  
 
-The purpose of this report is to discuss data to be utilized and make general assessment regarding how well a predictive model might perform. 
+The purpose of this report is to discuss data to be utilized and make general assessment regarding how well a predictive model might perform and establish a . 
 
 
 ## Data
@@ -99,15 +99,11 @@ A table showing the total number of snowfall events, along with mean and max sno
 
 ![alt text](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/snowdepth_snowfall.png)
 
-![alt text](figs/snowdepth_snowfall.png)
-
-
-
 
 
 ## Linear Regression Analysis  
 
-To assess snowfall prediction potential with Ordinary Least Squares model, a linear regresssion analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. While the R values are not noteably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
+To assess snowfall prediction potential with Ordinary Least Squares model, a linear regression analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. While the R values are not noteably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
   
 
 ***
@@ -134,10 +130,10 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 
 
 ## Conclusion
-While not large, there are some significant relationshps between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve preditive ability.  
+While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4ODk5NjEwMCwtMTkwNDgyNzIwOCwtMT
-E5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1MzQ3MywtNjk5ODA1
-MTM3LDc1ODcxMTQ4XX0=
+eyJoaXN0b3J5IjpbLTE2NDIyNDk3OTYsMTc4ODk5NjEwMCwtMT
+kwNDgyNzIwOCwtMTE5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1
+MzQ3MywtNjk5ODA1MTM3LDc1ODcxMTQ4XX0=
 -->
