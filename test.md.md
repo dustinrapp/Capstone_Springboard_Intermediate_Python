@@ -52,7 +52,12 @@ A map showing the Copper Mountain SNOTEL site and the meteorological sites used 
 ## Data and Wrangling Cleaning
 
 ### Data Organization
-Hourly surface data from each station was organized into timeseries dataframes with UTM timestamps.  While the KCCU and KXLV datasets were already in UTM time, the NRCS dataset was in local time and required conversion to UTM. 
+Hourly surface data from each station was organized and combined into a single  timeseries dataframes with UTM timestamps.  
+
+The following cleanup steps were performed to this dataset:
+
+ - While the KCCU and KXLV datasets were already in UTM time, the NRCS dataset was in local time and required conversion to UTM.   
+ - 
 
 The KCCU and KXLV datasets are in the Integrated Surface Hourly Data (ISHD) format did require some manipulation (e.g. divided by 10) to get values into typical units. Missing values (e.g. 9999 values) were translated to NaN values as well.  Missing data for all variables was linearly interpolated for time periods where 3 hours or less of data was missing.  The data was then plotted to see if there were any anomalous values.
 
@@ -138,7 +143,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3ODU0MjQwMywxNzg4OTk2MTAwLC0xOT
-A0ODI3MjA4LC0xMTk1MTI2Mjg1LDY5MDQ2NTExNCwyMTQyMzUz
-NDczLC02OTk4MDUxMzcsNzU4NzExNDhdfQ==
+eyJoaXN0b3J5IjpbNDk1Nzg3ODM5LDE3ODg5OTYxMDAsLTE5MD
+Q4MjcyMDgsLTExOTUxMjYyODUsNjkwNDY1MTE0LDIxNDIzNTM0
+NzMsLTY5OTgwNTEzNyw3NTg3MTE0OF19
 -->
