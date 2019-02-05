@@ -55,7 +55,8 @@ A map showing the Copper Mountain SNOTEL site and the meteorological sites used 
 Hourly surface data from each station was organized into timeseries dataframes with UTM timestamps.  While the KCCU and KXLV datasets were already in UTM time, the NRCS dataset was in local time and required conversion to UTM. 
 
 The KCCU and KXLV datasets are in the Integrated Surface Hourly Data (ISHD) format did require some manipulation (e.g. divided by 10) to get values into typical units. Missing values (e.g. 9999 values) were translated to NaN values as well.  Missing data for all variables was linearly interpolated for time periods where 3 hours or less of data was missing.  The data was then plotted to see if there were any anomalous values.
-It was noted that some of the KCCU data (especially temperature) did not demonstrate as much of a diurnal variation as the KXLV station.  These data are considered suspicious but not removed from the dataset.
+
+It was noted that some of the KCCU data (especially temperature) did not demonstrate as much of a diurnal variation as the KXLV station.  These data are considered suspicious but not removed from the dataset.  A more robust quality control of this dataset is outside the scope of this study, but should be considered for future studies.
 
 Some anomalous data was observed in the SNOTEL snow depth data.  Physically unrealistic readings (e.g. spikes in some of the snow depth data or snowdepth reports which occur when temperatures did not support snowfall) were removed as well as extreme negative values. 
 
@@ -137,7 +138,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMDMxOTgzMSwxNzg4OTk2MTAwLC0xOT
+eyJoaXN0b3J5IjpbLTU3ODU0MjQwMywxNzg4OTk2MTAwLC0xOT
 A0ODI3MjA4LC0xMTk1MTI2Mjg1LDY5MDQ2NTExNCwyMTQyMzUz
 NDczLC02OTk4MDUxMzcsNzU4NzExNDhdfQ==
 -->
