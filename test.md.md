@@ -57,13 +57,13 @@ Hourly surface data from each station was organized and combined into a single  
 The following cleanup steps were performed to this dataset:
 
  - While the KCCU and KXLV datasets were already in UTM time, the NRCS dataset was in local time and required conversion to UTM.   
- - 
+ -  The KCCU and KXLV datasets are in the Integrated Surface Hourly Data (ISHD) format did require some manipulation (e.g. divided by 10) to get values into typical units. 
+ - Missing values (e.g. 9999 values) were translated to NaN values.
+ -  Missing data for all variables was linearly interpolated for time periods where 3 hours or less of data was missing. 
 
-The KCCU and KXLV datasets are in the Integrated Surface Hourly Data (ISHD) format did require some manipulation (e.g. divided by 10) to get values into typical units. Missing values (e.g. 9999 values) were translated to NaN values as well.  Missing data for all variables was linearly interpolated for time periods where 3 hours or less of data was missing.  The data was then plotted to see if there were any anomalous values.
+The data was then plotted to see if there were any anomalous values. It was noted that some of the KCCU data (especially temperature) did not demonstrate as much of a diurnal variation as the KXLV station.  These data are considered suspicious but not removed from the dataset.  A more robust quality control of this dataset is outside the scope of this study, but should be considered for future studies.
 
-It was noted that some of the KCCU data (especially temperature) did not demonstrate as much of a diurnal variation as the KXLV station.  These data are considered suspicious but not removed from the dataset.  A more robust quality control of this dataset is outside the scope of this study, but should be considered for future studies.
-
-Some anomalous data was observed in the SNOTEL snow depth data.  Physically unrealistic readings (e.g. spikes in some of the snow depth data or snowdepth reports which occur when temperatures did not support snowfall) were removed as well as extreme negative values. 
+A small amount of anomalous data was observed in the SNOTEL snow depth data an.  Physically unrealistic readings (e.g. spikes in some of the snow depth data or snowdepth reports which occur when temperatures did not support snowfall) were removed as well as extreme negative values. 
 
 The three individual dataframes were merged into a single timeseries dataframe with one value per variable each hour. 
 
@@ -143,7 +143,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk1Nzg3ODM5LDE3ODg5OTYxMDAsLTE5MD
+eyJoaXN0b3J5IjpbLTI3OTQ0MjM3LDE3ODg5OTYxMDAsLTE5MD
 Q4MjcyMDgsLTExOTUxMjYyODUsNjkwNDY1MTE0LDIxNDIzNTM0
 NzMsLTY5OTgwNTEzNyw3NTg3MTE0OF19
 -->
