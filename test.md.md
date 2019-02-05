@@ -99,6 +99,9 @@ A table showing the total number of snowfall events, along with mean and max sno
 
 ![alt text](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/snowdepth_snowfall.png)
 
+![alt text](figs/snowdepth_snowfall.png)
+
+
 
 
 
@@ -134,7 +137,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationshps between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve preditive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4OTc4MzU3MiwtMTkwNDgyNzIwOCwtMT
+eyJoaXN0b3J5IjpbMTc4ODk5NjEwMCwtMTkwNDgyNzIwOCwtMT
 E5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1MzQ3MywtNjk5ODA1
 MTM3LDc1ODcxMTQ4XX0=
 -->
