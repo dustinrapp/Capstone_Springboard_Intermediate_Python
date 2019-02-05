@@ -52,7 +52,7 @@ A map showing the Copper Mountain SNOTEL site and the meteorological sites used 
 ## Data and Wrangling Cleaning
 
 ### Data Organization
-Hourly surface data from each station, do organized and combined into a single  timeseries dataframes with UTM timestamps.  
+Hourly surface data from each station, downloaded, organized and combined into a single  timeseries dataframes with UTM timestamps.  
 
 The following cleanup steps were performed to this dataset:
 
@@ -65,20 +65,19 @@ The data was plotted to see if there were any extreme values warranting removal.
 
 A small amount of anomalous data was observed in the SNOTEL snow depth data and was removed.  These physically unrealistic readings (e.g. spikes in some of the snow depth data or snowdepth reports which occur when temperatures did not support snowfall) were removed as well as extreme negative values. 
 
-The three individual dataframes were merged into a single timeseries dataframe with one value per variable each hour. 
+
 
 ### Additional Calculations
 
-**Pressure**
+**Pressure**  
 Changes in pressure are often a predictive indicator of weather conditions (i.e. pressure drops often accompany strong storm systems), a twelve hour pressure change variable was added to the datset.  This was calcuated by subtracting the 00:00 observation from the upcoming 12:00 observation.
 
-**Snowfall**
+**Snowfall**    
 As the SNOTEL data only includes snow depth data instead of snowfall data, snowfall was caluclated based on changes in snowdepth. Due to the sensitivity of the SNOTEL snow depth measurement to external forces (e.g. debris, air pressure), snow depth data from the SNOTEL site appeared noisy for smaller snowstorms (i.e. less then 3 inches). To minimize the small scale pertubations found in the data, 12 hour snowfall totals were estimated at 00:00 UTC and 12:00 UTC and only 12-hr snowfall events where greater then or equal to 3 inches occurred were utilized.  The snowfall data was then added to meteorological dataframe.   
 
 Because only 00:00 and 12:00 snowfall observations were utilized in the analysis, all variables in the meteorological dataframe were reduced from hourly observations to twelve hour observations.  A new dataframe was created utilizing only 00:00 and 12:00 observations.
 
-
-A table showing the total number of snowfall events, along with mean and max snowfall for each year is found in **Table 3**.  A timeseries plot showing the snowdepth, along with these snowfall events is found in **Figure 2**.
+A table showing the total number of snowfall events, along with mean, max, and standard deviation of snowfall for each year is found in **Table 3**.  A timeseries plot showing the snowdepth, along with these snowfall events is found in **Figure 2**.
   
 
 ***
@@ -113,7 +112,7 @@ A table showing the total number of snowfall events, along with mean and max sno
 
 ## Linear Regression Analysis  
 
-To assess snowfall prediction potential with Ordinary Least Squares model, a linear regression analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. While the R values are not noteably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
+To assess snowfall prediction potential with Ordinary Least Squares model, a linear regression analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. While the R values are not notably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
   
 
 ***
@@ -143,7 +142,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0OTc4MTU2NCwxNzg4OTk2MTAwLC0xOT
-A0ODI3MjA4LC0xMTk1MTI2Mjg1LDY5MDQ2NTExNCwyMTQyMzUz
-NDczLC02OTk4MDUxMzcsNzU4NzExNDhdfQ==
+eyJoaXN0b3J5IjpbLTEzMTQyNDM2NDAsMTc4ODk5NjEwMCwtMT
+kwNDgyNzIwOCwtMTE5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1
+MzQ3MywtNjk5ODA1MTM3LDc1ODcxMTQ4XX0=
 -->
