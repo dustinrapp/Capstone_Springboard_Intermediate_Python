@@ -19,6 +19,7 @@ The Copper Mountain ski resort is unique as there is an official SNOTEL National
 
 A map showing the Copper Mountain SNOTEL site and the meteorological sites used in this assessment is also shown in **Figure 1**  
   
+  ***
 **Figure 1 - Map of Locations**  
   
 ![KXLV](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png)
@@ -27,7 +28,7 @@ A map showing the Copper Mountain SNOTEL site and the meteorological sites used 
 ***
 
 
-**Table 1 - Meteorological Variables by Station[^foo].**  
+**Table 1 - Meteorological Variables by Station**  
   
 | SNOTEL        | LXV ASOS       | KCCU AWOS      |        
 |     :---:     |     :---:      |       ---:     |
@@ -51,9 +52,12 @@ A map showing the Copper Mountain SNOTEL site and the meteorological sites used 
 ## Data and Wrangling Cleaning
 
 ### Data Organization
-Hourly surface data from each station was organized into timeseries dataframes with UTM timestamps.  While the KCCU and KXLV datasets were already in UTM time, the NRCS dataset was in local time and required conversion to UTM. The KCCU and KXLV datasets are in the Integrated Surface Hourly Data (ISHD) format did require some manipulation (e.g. divided by 10) to get values into typical units. Missing values (e.g. 9999 values) were tranlated to NaN values as well.  Missing data for all variables was linearly interpolated for time periods where 3 hours or less of data was missing.  The data was then plotted to see if there were any anomalous values.
+Hourly surface data from each station was organized into timeseries dataframes with UTM timestamps.  While the KCCU and KXLV datasets were already in UTM time, the NRCS dataset was in local time and required conversion to UTM. 
 
-Some anomalous data was observed in the SNOTEL snow depth data.  Physically unrealistic readings (e.g. spikes in some of the snow depth data) were removed as well as extreme negative values.  
+The KCCU and KXLV datasets are in the Integrated Surface Hourly Data (ISHD) format did require some manipulation (e.g. divided by 10) to get values into typical units. Missing values (e.g. 9999 values) were translated to NaN values as well.  
+Missing data for all variables was linearly interpolated for time periods where 3 hours or less of data was missing.  The data was then plotted to see if there were any anomalous values.
+
+Some anomalous data was observed in the SNOTEL snow depth data.  Physically unrealistic readings (e.g. spikes in some of the snow depth data ) were removed as well as extreme negative values.  
 
 The three individual dataframes were merged into a single timeseries dataframe with one value per variable each hour. 
 
@@ -133,7 +137,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg3ODIyMjYwLDE3ODg5OTYxMDAsLTE5MD
-Q4MjcyMDgsLTExOTUxMjYyODUsNjkwNDY1MTE0LDIxNDIzNTM0
-NzMsLTY5OTgwNTEzNyw3NTg3MTE0OF19
+eyJoaXN0b3J5IjpbLTE0MjE4Njc0NjMsMTc4ODk5NjEwMCwtMT
+kwNDgyNzIwOCwtMTE5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1
+MzQ3MywtNjk5ODA1MTM3LDc1ODcxMTQ4XX0=
 -->
