@@ -54,10 +54,10 @@ A map showing the Copper Mountain SNOTEL site and the meteorological sites used 
 ### Data Organization
 Hourly surface data from each station was organized into timeseries dataframes with UTM timestamps.  While the KCCU and KXLV datasets were already in UTM time, the NRCS dataset was in local time and required conversion to UTM. 
 
-The KCCU and KXLV datasets are in the Integrated Surface Hourly Data (ISHD) format did require some manipulation (e.g. divided by 10) to get values into typical units. Missing values (e.g. 9999 values) were translated to NaN values as well.  
-Missing data for all variables was linearly interpolated for time periods where 3 hours or less of data was missing.  The data was then plotted to see if there were any anomalous values.
+The KCCU and KXLV datasets are in the Integrated Surface Hourly Data (ISHD) format did require some manipulation (e.g. divided by 10) to get values into typical units. Missing values (e.g. 9999 values) were translated to NaN values as well.  Missing data for all variables was linearly interpolated for time periods where 3 hours or less of data was missing.  The data was then plotted to see if there were any anomalous values.
+It was noted that some of the KCCU u
 
-Some anomalous data was observed in the SNOTEL snow depth data.  Physically unrealistic readings (e.g. spikes in some of the snow depth data ) were removed as well as extreme negative values.  
+Some anomalous data was observed in the SNOTEL snow depth data.  Physically unrealistic readings (e.g. spikes in some of the snow depth data or snowdepth reports which occur when temperatures did not support snowfall) were removed as well as extreme negative values. 
 
 The three individual dataframes were merged into a single timeseries dataframe with one value per variable each hour. 
 
@@ -137,7 +137,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjE4Njc0NjMsMTc4ODk5NjEwMCwtMT
-kwNDgyNzIwOCwtMTE5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1
-MzQ3MywtNjk5ODA1MTM3LDc1ODcxMTQ4XX0=
+eyJoaXN0b3J5IjpbLTc1MTI1NDQzNCwxNzg4OTk2MTAwLC0xOT
+A0ODI3MjA4LC0xMTk1MTI2Mjg1LDY5MDQ2NTExNCwyMTQyMzUz
+NDczLC02OTk4MDUxMzcsNzU4NzExNDhdfQ==
 -->
