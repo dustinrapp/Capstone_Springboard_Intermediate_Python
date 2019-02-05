@@ -78,17 +78,17 @@ A table showing the total number of snowfall events, along with mean and max sno
 
 |   Year |   Number 12hr Snowfall Events >=3 |    Mean |   Median |   Max |   %Missing SnowDepth |   Std Deviation |
 |--------|-----------------------------------|---------|----------|-------|----------------------|-----------------|
-|   2006 |                                26 | 4.84615 |  4       |  11   |           0.00.69  |         1.87478 |
-|   2007 |                                29 | 3.94253 |  3.33333 |   6.5 |           0.0069 |         1.17222 |
-|   2008 |                                27 | 4.46296 |  3.66667 |   8   |           0.00.69  |         1.8461  |
-|   2009 |                                27 | 4.25309 |  4       |  13   |           0.00694444 |         1.9172  |
-|   2010 |                                30 | 4.58333 |  4       |   9   |           0.00689688 |         1.74841 |
-|   2011 |                                32 | 4.34375 |  4       |   7   |           0.00693493 |         1.3786  |
-|   2012 |                                14 | 5.14286 |  4       |  10   |           0.00694444 |         2.29463 |
-|   2013 |                                32 | 4.2875  |  4       |  12   |           0.00694444 |         1.77566 |
-|   2015 |                                23 | 4.17391 |  4       |   8   |           0.00681126 |         1.23894 |
-|   2016 |                                32 | 4.90625 |  4       |  16   |           0.00694444 |         2.98286 |
-|   2017 |                                29 | 4.58621 |  3       |  16   |           0.00694444 |         2.81029 |
+|   2006 |                                26 | 4.8 |  4       |  11   |           0.69  |         1.87478 |
+|   2007 |                                29 | 3.9 |  3.33333 |   6.5 |           0.69 |         1.17222 |
+|   2008 |                                27 | 4.5 |  3.66667 |   8   |           0.69  |         1.8461  |
+|   2009 |                                27 | 4.25309 |  4       |  13   |           0.69 |         1.9172  |
+|   2010 |                                30 | 4.58333 |  4       |   9   |           0.69 |         1.74841 |
+|   2011 |                                32 | 4.34375 |  4       |   7   |           0.69 |         1.3786  |
+|   2012 |                                14 | 5.14286 |  4       |  10   |           0.69 |         2.29463 |
+|   2013 |                                32 | 4.2875  |  4       |  12   |           0.69 |         1.77566 |
+|   2015 |                                23 | 4.17391 |  4       |   8   |           0.68 |         1.23894 |
+|   2016 |                                32 | 4.90625 |  4       |  16   |           0.69 |         2.98286 |
+|   2017 |                                29 | 4.58621 |  3       |  16   |           0.69 |         2.81029 |
   
 
 ***
@@ -132,7 +132,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationshps between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve preditive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzk2NzM0OTEsLTExOTUxMjYyODUsNj
+eyJoaXN0b3J5IjpbLTE0NTQ1NjM5MzIsLTExOTUxMjYyODUsNj
 kwNDY1MTE0LDIxNDIzNTM0NzMsLTY5OTgwNTEzNyw3NTg3MTE0
 OF19
 -->
