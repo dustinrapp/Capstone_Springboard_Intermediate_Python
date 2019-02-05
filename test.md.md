@@ -100,6 +100,8 @@ A table showing the total number of snowfall events, along with mean and max sno
 ![alt text](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/snowdepth_snowfall.png)
 
 
+
+
 ## Linear Regression Analysis  
 
 To assess snowfall prediction potential with Ordinary Least Squares model, a linear regresssion analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. While the R values are not noteably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
@@ -132,7 +134,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationshps between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve preditive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDQ4MjcyMDgsLTExOTUxMjYyODUsNj
-kwNDY1MTE0LDIxNDIzNTM0NzMsLTY5OTgwNTEzNyw3NTg3MTE0
-OF19
+eyJoaXN0b3J5IjpbMTM4OTc4MzU3MiwtMTkwNDgyNzIwOCwtMT
+E5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1MzQ3MywtNjk5ODA1
+MTM3LDc1ODcxMTQ4XX0=
 -->
