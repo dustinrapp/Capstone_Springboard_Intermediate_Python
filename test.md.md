@@ -58,14 +58,14 @@ A map showing the Copper Mountain SNOTEL site and the meteorological sites used 
 ### Data Organization
 Hourly surface data from each station, downloaded, organized and combined into a single  timeseries dataframes with UTM timestamps.  
 
-The following cleanup steps were performed to this dataset:
+The following cleanup steps were performed on this dataset:
 
  - While the KCCU and KXLV datasets were already in UTM time, the NRCS dataset was in local time and required conversion to UTM.   
- -  The KCCU and KXLV datasets are in the Integrated Surface Hourly Data (ISHD) format did require some manipulation (e.g. divided by 10) to get values into typical units. 
+ -  The KCCU and KXLV datasets are in the Integrated Surface Hourly Data (ISHD) format and did require some manipulation (e.g. divided by 10) to get values into typical units. 
  - Missing values (e.g. 9999 values) were translated to NaN values.
  -  Missing data for all variables was linearly interpolated for time periods where 3 hours or less of data was missing. 
 
-The data was plotted to see if there were any extreme values warranting removal. It was noted that some of the KCCU data (especially temperature) did not demonstrate as much of a diurnal variation as the KXLV station.  These data are considered suspicious but not removed from the dataset.  A more robust quality control of this dataset is outside the scope of this study, but should be considered for future studies.
+The data was plotted to see if there were any extreme values warranting removal. It was noted that some of the KCCU data (especially temperature) did not demonstrate as much of a diurnal variation as the KXLV station.  These data are considered suspicious but were not removed from the dataset.  A more robust quality control of this dataset is outside the scope of this prelimiaryn study, but should be considered for future studies.
 
 A small amount of anomalous data was observed in the SNOTEL snow depth data and was removed.  These physically unrealistic readings (e.g. spikes in some of the snow depth data or snowdepth reports which occur when temperatures did not support snowfall) were removed as well as extreme negative values. 
 
@@ -77,7 +77,7 @@ A small amount of anomalous data was observed in the SNOTEL snow depth data and 
 Changes in pressure are often a predictive indicator of weather conditions (i.e. pressure drops often accompany strong storm systems), a twelve hour pressure change variable was added to the datset.  This was calculated by subtracting the 00:00 observation from the upcoming 12:00 observation.
 
 **Snowfall**    
-As the SNOTEL data only includes snow depth data instead of snowfall data, snowfall was caluclated based on changes in snowdepth. Due to the sensitivity of the SNOTEL snow depth measurement to external forces (e.g. debris, air pressure), snow depth data from the SNOTEL site appeared noisy for smaller snowstorms (i.e. less then 3 inches). To minimize the small scale pertubations found in the data, 12 hour snowfall totals were estimated at 00:00 UTC and 12:00 UTC and only 12-hr snowfall events where greater then or equal to 3 inches occurred were utilized.  The snowfall data was then added to meteorological dataframe.   
+As the SNOTEL data only includes snow depth data instead of snowfall data, snowfall was calculated based on changes in snowdepth. Due to the sensitivity of the SNOTEL snow depth measurement sensors to external forces (e.g. debris, air pressure), snow depth data from the SNOTEL site appeared noisy for smaller snowstorms (i.e. less then 3 inches). To minimize the small scale perturbations found in the data, 12 hour snowfall totals were estimated at 00:00 UTC and 12:00 UTC and only 12-hr snowfall events where greater then or equal to 3 inches occurred were utilized.  The snowfall data was then added to meteorological dataframe.   
 
 Because only 00:00 and 12:00 snowfall observations were utilized in the analysis, all variables in the meteorological dataframe were reduced from hourly observations to twelve hour observations.  A new dataframe was created utilizing only 00:00 and 12:00 observations.
 
@@ -144,8 +144,8 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDk3ODg0MjYsLTYxODE2ODI3Nyw3MT
-E1NTcyNDEsLTEzMTQyNDM2NDAsMTc4ODk5NjEwMCwtMTkwNDgy
-NzIwOCwtMTE5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1MzQ3My
-wtNjk5ODA1MTM3LDc1ODcxMTQ4XX0=
+eyJoaXN0b3J5IjpbMTAyNDY4MzAxMSwtNjE4MTY4Mjc3LDcxMT
+U1NzI0MSwtMTMxNDI0MzY0MCwxNzg4OTk2MTAwLC0xOTA0ODI3
+MjA4LC0xMTk1MTI2Mjg1LDY5MDQ2NTExNCwyMTQyMzUzNDczLC
+02OTk4MDUxMzcsNzU4NzExNDhdfQ==
 -->
