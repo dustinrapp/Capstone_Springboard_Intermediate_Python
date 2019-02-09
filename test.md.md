@@ -22,7 +22,11 @@ A map showing the Copper Mountain SNOTEL site and the meteorological sites used 
   ***
 **Figure 1 - Map of Locations**  
   
-![KXLV](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png)
+<p float="left">
+  <img src="https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png" width="300" />
+  <img src="https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png" width="300" /> 
+  <img src="https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png" width="300" />
+</p>
   
 
 ***
@@ -140,8 +144,8 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMTE3NzA3NywtNjE4MTY4Mjc3LDcxMT
-U1NzI0MSwtMTMxNDI0MzY0MCwxNzg4OTk2MTAwLC0xOTA0ODI3
-MjA4LC0xMTk1MTI2Mjg1LDY5MDQ2NTExNCwyMTQyMzUzNDczLC
-02OTk4MDUxMzcsNzU4NzExNDhdfQ==
+eyJoaXN0b3J5IjpbLTE0MDk3ODg0MjYsLTYxODE2ODI3Nyw3MT
+E1NTcyNDEsLTEzMTQyNDM2NDAsMTc4ODk5NjEwMCwtMTkwNDgy
+NzIwOCwtMTE5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1MzQ3My
+wtNjk5ODA1MTM3LDc1ODcxMTQ4XX0=
 -->
