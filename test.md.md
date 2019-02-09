@@ -70,7 +70,7 @@ A small amount of anomalous data was observed in the SNOTEL snow depth data and 
 ### Additional Calculations
 
 **Pressure**  
-Changes in pressure are often a predictive indicator of weather conditions (i.e. pressure drops often accompany strong storm systems), a twelve hour pressure change variable was added to the datset.  This was calcuated by subtracting the 00:00 observation from the upcoming 12:00 observation.
+Changes in pressure are often a predictive indicator of weather conditions (i.e. pressure drops often accompany strong storm systems), a twelve hour pressure change variable was added to the datset.  This was calculated by subtracting the 00:00 observation from the upcoming 12:00 observation.
 
 **Snowfall**    
 As the SNOTEL data only includes snow depth data instead of snowfall data, snowfall was caluclated based on changes in snowdepth. Due to the sensitivity of the SNOTEL snow depth measurement to external forces (e.g. debris, air pressure), snow depth data from the SNOTEL site appeared noisy for smaller snowstorms (i.e. less then 3 inches). To minimize the small scale pertubations found in the data, 12 hour snowfall totals were estimated at 00:00 UTC and 12:00 UTC and only 12-hr snowfall events where greater then or equal to 3 inches occurred were utilized.  The snowfall data was then added to meteorological dataframe.   
@@ -112,7 +112,7 @@ A table showing the total number of snowfall events, along with mean, max, and s
 
 ## Linear Regression Analysis  
 
-To assess snowfall prediction potential with Ordinary Least Squares model, a linear regression analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  The data are sorted by largest R value. Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. While the R values are not notably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
+To assess snowfall prediction potential with Ordinary Least Squares model, a linear regression analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  The data are sorted by largest R value. Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. Though Cloud Cover does have higher R values as well, the p values and amount of data missing is also very high. While the R values are not notably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
   
 
 ***
@@ -140,7 +140,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM3NTY0MzE2LC0xMzE0MjQzNjQwLDE3OD
+eyJoaXN0b3J5IjpbODg1MTY0MTg1LC0xMzE0MjQzNjQwLDE3OD
 g5OTYxMDAsLTE5MDQ4MjcyMDgsLTExOTUxMjYyODUsNjkwNDY1
 MTE0LDIxNDIzNTM0NzMsLTY5OTgwNTEzNyw3NTg3MTE0OF19
 -->
