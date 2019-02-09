@@ -121,27 +121,27 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 
 |                                                |       Max |       Min |          Mean |   Slope |   Std Error |   R Value |   P-value |   % Missing |
 |------------------------------------------------|-----------|-----------|---------------|---------|-------------|-----------|-----------|-------------|
-| CMtn Dewpoint (deg C)                        |      0    |    -27    |     -9.65568  |   0.085 |       0.03  |     0.171 |     0.005 |       0.219 |
-| CMtn CloudCover (oktas)                     |      8    |      0    |      7.40655  |   0.145 |       0.085 |     0.142 |     0.089 |       0.571 |
-| LXV Dewpoint (deg C)                          |      2.8  |    -22.8  |     -8.07042  |   0.074 |       0.031 |     0.134 |     0.019 |       0.095 |
-| LXV CloudCover (oktas)                       |      8    |      0    |      6.76099  |   0.088 |       0.059 |     0.122 |     0.136 |       0.55  |
-| LXV 12hr Pressure difference (hp)                 |     13.35 |    -20.2  |     -2.99515  |  -0.051 |       0.024 |    -0.122 |     0.033 |       0.104 |
-|CMtn WindSpeed (m/s)                        |     20.1  |      0    |      7.71258  |   0.061 |       0.034 |     0.112 |     0.073 |       0.243 |
-| CMtn Temperature (degC)                     |      7    |    -21    |     -4.69735  |   0.035 |       0.031 |     0.069 |     0.261 |       0.219 |
-| CMtn Temperature (deg C)                        |      7.6  |    -18.7  |     -3.63796  |   0.036 |       0.03  |     0.066 |     0.226 |       0     |
-| SNTL  Temperature (deg C)                    |      7.6  |    -18.7  |     -3.63796  |   0.036 |       0.03  |     0.066 |     0.226 |       0     |
-| LXV Temperature (deg C)                       |     13.3  |    -17.2  |     -3.02435  |   0.03  |       0.026 |     0.065 |     0.257 |       0.095 |
-| LXV Wind Direction (deg)                      |    360    |      0    |    184.172    |  -0.001 |       0.001 |    -0.055 |     0.336 |       0.095 |
-| CMtn Wind Direction (deg)                    |    360    |      0    |    236.485    |   0.002 |       0.002 |     0.044 |     0.48  |       0.243 |
-|LXV Pressure (hp)                            |   1028.5  |    983.3  |   1005.49     |  -0.011 |       0.015 |    -0.043 |     0.457 |       0.101 |
-| LXV WindSpeedmps                          |     13.4  |      0    |      3.69641  |   0.005 |       0.054 |     0.005 |     0.926 |       0.095 |
+| CMtn Dewpoint (deg C)                        |      0    |    -27    |     -9.7  |   0.085 |       0.03  |     0.171 |     0.005 |       0.219 |
+| CMtn CloudCover (oktas)                     |      8    |      0    |      7.4  |   0.145 |       0.085 |     0.142 |     0.089 |       0.571 |
+| LXV Dewpoint (deg C)                          |      2.8  |    -22.8  |     -8.1  |   0.074 |       0.031 |     0.134 |     0.019 |       0.095 |
+| LXV CloudCover (oktas)                       |      8    |      0    |      6.8  |   0.088 |       0.059 |     0.122 |     0.136 |       0.55  |
+| LXV 12hr Pressure difference (hp)                 |     13.35 |    -20.2  |     -3.0  |  -0.051 |       0.024 |    -0.122 |     0.033 |       0.104 |
+|CMtn WindSpeed (m/s)                        |     20.1  |      0    |      7.7  |   0.061 |       0.034 |     0.112 |     0.073 |       0.243 |
+| CMtn Temperature (degC)                     |      7    |    -21    |     -4.7  |   0.035 |       0.031 |     0.069 |     0.261 |       0.219 |
+| CMtn Temperature (deg C)                        |      7.6  |    -18.7  |     -3.6  |   0.036 |       0.03  |     0.066 |     0.226 |       0     |
+| SNTL  Temperature (deg C)                    |      7.6  |    -18.7  |     -3.6  |   0.036 |       0.03  |     0.066 |     0.226 |       0     |
+| LXV Temperature (deg C)                       |     13.3  |    -17.2  |     -3.0 |   0.03  |       0.026 |     0.065 |     0.257 |       0.095 |
+| LXV Wind Direction (deg)                      |    360    |      0    |    184.1    |  -0.001 |       0.001 |    -0.055 |     0.336 |       0.095 |
+| CMtn Wind Direction (deg)                    |    360    |      0    |    236.5    |   0.002 |       0.002 |     0.044 |     0.48  |       0.243 |
+|LXV Pressure (hp)                            |   1028.5  |    983.3  |   1005.5     |  -0.011 |       0.015 |    -0.043 |     0.457 |       0.101 |
+| LXV WindSpeed m/s                          |     13.4  |      0    |      3.7  |   0.005 |       0.054 |     0.005 |     0.926 |       0.095 |
 
 ## Conclusion
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODY3ODI3NTAsLTEzMTQyNDM2NDAsMT
-c4ODk5NjEwMCwtMTkwNDgyNzIwOCwtMTE5NTEyNjI4NSw2OTA0
-NjUxMTQsMjE0MjM1MzQ3MywtNjk5ODA1MTM3LDc1ODcxMTQ4XX
-0=
+eyJoaXN0b3J5IjpbLTcwMjc5NDg4MCwtMTMxNDI0MzY0MCwxNz
+g4OTk2MTAwLC0xOTA0ODI3MjA4LC0xMTk1MTI2Mjg1LDY5MDQ2
+NTExNCwyMTQyMzUzNDczLC02OTk4MDUxMzcsNzU4NzExNDhdfQ
+==
 -->
