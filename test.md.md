@@ -110,7 +110,7 @@ A table showing the total number of snowfall events, along with mean, max, and s
  
 
 
-![alt text](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/snowdepth_snowfall.png)
+![alt text](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/\Capstone\MS_CS_report\figsfigs/snowdepth_snowfall.png)
 
 
 
@@ -144,9 +144,9 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some 12-hr snowfall predictive ability predicting snowfall utilizing a very simple Ordinary Least Squares model  with these meteorological measurements.    Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk2NTg4NjI5LDg4NzU0NzYyMiwtMjA5Nz
-Q0Nzk3NiwtNjE4MTY4Mjc3LDcxMTU1NzI0MSwtMTMxNDI0MzY0
-MCwxNzg4OTk2MTAwLC0xOTA0ODI3MjA4LC0xMTk1MTI2Mjg1LD
-Y5MDQ2NTExNCwyMTQyMzUzNDczLC02OTk4MDUxMzcsNzU4NzEx
-NDhdfQ==
+eyJoaXN0b3J5IjpbLTcwNzcxNzk4MCw3OTY1ODg2MjksODg3NT
+Q3NjIyLC0yMDk3NDQ3OTc2LC02MTgxNjgyNzcsNzExNTU3MjQx
+LC0xMzE0MjQzNjQwLDE3ODg5OTYxMDAsLTE5MDQ4MjcyMDgsLT
+ExOTUxMjYyODUsNjkwNDY1MTE0LDIxNDIzNTM0NzMsLTY5OTgw
+NTEzNyw3NTg3MTE0OF19
 -->
