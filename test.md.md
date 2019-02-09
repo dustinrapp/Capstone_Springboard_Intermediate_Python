@@ -46,8 +46,8 @@ A map showing the Copper Mountain SNOTEL site and the meteorological sites used 
 | Station | Data Source                                                           |
 |-------- |---------------------------------------------------------------------- |
 |  SNOTEL | National Resources Conservation Service (www.NRCS.gov)                |   
-|LXV ASOS | National Climatitic Data Center - ISHD Lite format (www.NCDC.gov)     |
-|KCCU AWOS| National Climatitic Data Center (ISHD format) (www.NCDC.gov)          |
+|LXV ASOS | National Climatic Data Center - ISHD Lite format (www.NCDC.gov)     |
+|KCCU AWOS| National Climatic Data Center (ISHD format) (www.NCDC.gov)          |
 
 ## Data and Wrangling Cleaning
 
@@ -121,8 +121,8 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 
 |                                                |       Max |       Min |          Mean |   Slope |   Std Error |   R Value |   P-value |   % Missing |
 |------------------------------------------------|-----------|-----------|---------------|---------|-------------|-----------|-----------|-------------|
-| CMtn Dewpoint (deg C)                        |      0    |    -27    |     -9.7  |   0.085 |       0.03  |     0.171 |     0.005 |       21.9 |
-| CMtn CloudCover (oktas)                     |      8    |      0    |      7.4  |   0.145 |       0.085 |     0.142 |     0.089 |       57.1 |
+| KCCU Dewpoint (deg C)                        |      0    |    -27    |     -9.7  |   0.085 |       0.03  |     0.171 |     0.005 |       21.9 |
+| KCCU CloudCover (oktas)                     |      8    |      0    |      7.4  |   0.145 |       0.085 |     0.142 |     0.089 |       57.1 |
 | LXV Dewpoint (deg C)                          |      2.8  |    -22.8  |     -8.1  |   0.074 |       0.031 |     0.134 |     0.019 |       9.5 |
 | LXV CloudCover (oktas)                       |      8    |      0    |      6.8  |   0.088 |       0.059 |     0.122 |     0.136 |       55.0 |
 | LXV 12hr Pressure difference (hp)                 |     13.35 |    -20.2  |     -3.0  |  -0.051 |       0.024 |    -0.122 |     0.033 |       10.4 |
@@ -140,7 +140,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg1MTY0MTg1LC0xMzE0MjQzNjQwLDE3OD
+eyJoaXN0b3J5IjpbNzExNTU3MjQxLC0xMzE0MjQzNjQwLDE3OD
 g5OTYxMDAsLTE5MDQ4MjcyMDgsLTExOTUxMjYyODUsNjkwNDY1
 MTE0LDIxNDIzNTM0NzMsLTY5OTgwNTEzNyw3NTg3MTE0OF19
 -->
