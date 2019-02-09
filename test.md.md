@@ -119,30 +119,29 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 
 **Table 3 - Output statistics from Linear Regression Analysis**  
 
-|                                                |   Slope |   Std Error |   R Value |   P-value |   % Missing |
-|------------------------------------------------|---------|-------------|-----------|-----------|-------------|
-| KCCU Temperature                               |   0.01  |       0.033 |     0.063 |     0.277 |       0     |
-| KCCU Temperature                               |   0.012 |       0.033 |     0.067 |     0.31  |       0.228 |
-| KCCU Dewpoint                                  |   0.017 |       0.033 |     0.166 |     0.012 |       0.228 |
-| KCCU Wind Direction                            |   0.024 |       0.002 |     0.042 |     0.528 |       0.248 |
-| KCCU Wind Speed                                |   0.03  |       0.037 |     0.128 |     0.055 |       0.248 |
-| KCCU Cloud Cover                               |  -0.077 |       0.09  |     0.151 |     0.107 |       0.614 |
-| SNOTEL Temperature                             |  -0.015 |       0.033 |     0.063 |     0.277 |       0     |
-| KLXV Temperature                               |  -0.006 |       0.026 |     0.063 |     0.276 |       0     |
-| KLXV Dewpoint                                  |  -0.007 |       0.032 |     0.132 |     0.023 |       0     |
-| KLXV Pressure                                  |  -0.001 |       0.016 |    -0.045 |     0.443 |       0.003 |
-| KLXV Wind Direction                            |  -0.007 |       0.001 |    -0.061 |     0.296 |       0     |
-| KLXV Wind Speed                                |   0.002 |       0.055 |     0.002 |     0.975 |       0     |
-| KLXV Cloud Cover                               |   0.007 |       0.059 |     0.123 |     0.137 |       0.5   |
-| KLXV 12hr Pressure Change                      |  -0.051 |       0.024 |    -0.121 |     0.037 |       0.003 |
-
-
+|                                                |       Max |       Min |          Mean |   Slope |   Std Error |   R Value |   P-value |   % Missing |
+|------------------------------------------------|-----------|-----------|---------------|---------|-------------|-----------|-----------|-------------|
+| CMtn Dewpoint (deg C)                        |      0    |    -27    |     -9.65568  |   0.085 |       0.03  |     0.171 |     0.005 |       0.219 |
+| CMtn CloudCover (oktas                     |      8    |      0    |      7.40655  |   0.145 |       0.085 |     0.142 |     0.089 |       0.571 |
+| LXV LXV_Dewpoint_degC                          |      2.8  |    -22.8  |     -8.07042  |   0.074 |       0.031 |     0.134 |     0.019 |       0.095 |
+| LXV LXV_CloudCover_oktas                       |      8    |      0    |      6.76099  |   0.088 |       0.059 |     0.122 |     0.136 |       0.55  |
+| LXV LXV_12hr_delta_Pressure_hp                 |     13.35 |    -20.2  |     -2.99515  |  -0.051 |       0.024 |    -0.122 |     0.033 |       0.104 |
+| CMtn CMtn_WindSpeed_mps                        |     20.1  |      0    |      7.71258  |   0.061 |       0.034 |     0.112 |     0.073 |       0.243 |
+| CMtn CMtn_Temperature_degC                     |      7    |    -21    |     -4.69735  |   0.035 |       0.031 |     0.069 |     0.261 |       0.219 |
+| CMtn CMtnSNTL_Temp_degC                        |      7.6  |    -18.7  |     -3.63796  |   0.036 |       0.03  |     0.066 |     0.226 |       0     |
+| CMtnSNTL CMtnSNTL_Temp_degC                    |      7.6  |    -18.7  |     -3.63796  |   0.036 |       0.03  |     0.066 |     0.226 |       0     |
+| LXV LXV_Temperature_degC                       |     13.3  |    -17.2  |     -3.02435  |   0.03  |       0.026 |     0.065 |     0.257 |       0.095 |
+| LXV LXV_WindDirection_deg                      |    360    |      0    |    184.172    |  -0.001 |       0.001 |    -0.055 |     0.336 |       0.095 |
+| CMtn CMtn_WindDirection_deg                    |    360    |      0    |    236.485    |   0.002 |       0.002 |     0.044 |     0.48  |       0.243 |
+| LXV LXV_Pressure_hp                            |   1028.5  |    983.3  |   1005.49     |  -0.011 |       0.015 |    -0.043 |     0.457 |       0.101 |
+| LXV LXV_WindSpeed_mps                          |     13.4  |      0    |      3.69641  |   0.005 |       0.054 |     0.005 |     0.926 |       0.095 |
 
 ## Conclusion
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTQyNDM2NDAsMTc4ODk5NjEwMCwtMT
-kwNDgyNzIwOCwtMTE5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1
-MzQ3MywtNjk5ODA1MTM3LDc1ODcxMTQ4XX0=
+eyJoaXN0b3J5IjpbMTIxODQ2OTI1MCwtMTMxNDI0MzY0MCwxNz
+g4OTk2MTAwLC0xOTA0ODI3MjA4LC0xMTk1MTI2Mjg1LDY5MDQ2
+NTExNCwyMTQyMzUzNDczLC02OTk4MDUxMzcsNzU4NzExNDhdfQ
+==
 -->
