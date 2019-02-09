@@ -77,7 +77,7 @@ A small amount of anomalous data was observed in the SNOTEL snow depth data and 
 Changes in pressure are often a predictive indicator of weather conditions (i.e. pressure drops often accompany strong storm systems), a twelve hour pressure change variable was added to the datset.  This was calculated by subtracting the 00:00 observation from the upcoming 12:00 observation.
 
 **Snowfall**    
-As the SNOTEL data only includes snow depth data instead of snowfall data, snowfall was calculated based on changes in snowdepth. Due to the sensitivity of the SNOTEL snow depth measurement sensors to external forces (e.g. debris, air pressure), snow depth data from the SNOTEL site appeared noisy for smaller snowstorms (i.e. less then 3 inches). To minimize the small scale perturbations found in the data, 12 hour snowfall totals were estimated at 00:00 UTC and 12:00 UTC and only 12-hr snowfall events where greater then or equal to 3 inches occurred were utilized.  The snowfall data was then added to meteorological dataframe.   
+As the SNOTEL data only includes snow depth data instead of snowfall data, snowfall was calculated based on changes in snowdepth. Due to the sensitivity of the SNOTEL snow depth measurement sensors to external forces (e.g. debris, air pressure), snow depth data from the SNOTEL site appeared noisy for smaller snowstorms (i.e. less then 3 inches). To minimize the small scale perturbations found in the data, 12 hour snowfall totals were estimated at 00:00 UTC and 12:00 UTC and only 12-hr snowfall events where greater then or equal to 3 inches occurred were considered a snowfall event.  The snowfall data was then added to meteorological dataframe.   
 
 Because only 00:00 and 12:00 snowfall observations were utilized in the analysis, all variables in the meteorological dataframe were reduced from hourly observations to twelve hour observations.  A new dataframe was created utilizing only 00:00 and 12:00 observations.
 
@@ -89,7 +89,7 @@ A table showing the total number of snowfall events, along with mean, max, and s
 
 **Table 3  Statistics on Snowfall Events To be Used in Analysis**  
 
-|   Year |   Number 12hr Snowfall Events >=3 |   Mean |   Median |   Max |   %Missing SnowDepth |   Std Deviation |
+|   Year |   Number 12hr Snowfall Events >=3 |   Mean^[1] |   Median^[1] |   Max^[1] |   %Missing SnowDepth |   Std Deviation |
 |--------|-----------------------------------|--------|----------|-------|----------------------|-----------------|
 |   2006 |                                26 |    4.8 |      4   |  11   |                 0.69 |            1.87 |
 |   2007 |                                29 |    3.9 |      3.3 |   6.5 |                 0.69 |            1.17 |
@@ -144,8 +144,8 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNDY4MzAxMSwtNjE4MTY4Mjc3LDcxMT
-U1NzI0MSwtMTMxNDI0MzY0MCwxNzg4OTk2MTAwLC0xOTA0ODI3
-MjA4LC0xMTk1MTI2Mjg1LDY5MDQ2NTExNCwyMTQyMzUzNDczLC
-02OTk4MDUxMzcsNzU4NzExNDhdfQ==
+eyJoaXN0b3J5IjpbLTE3MTQxODA1NDUsLTYxODE2ODI3Nyw3MT
+E1NTcyNDEsLTEzMTQyNDM2NDAsMTc4ODk5NjEwMCwtMTkwNDgy
+NzIwOCwtMTE5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1MzQ3My
+wtNjk5ODA1MTM3LDc1ODcxMTQ4XX0=
 -->
