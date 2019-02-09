@@ -1,6 +1,6 @@
 
 ## Milestone Capstone:  
-# Utilizing Meteorological Data with Supervised Learning to Predict Snowfall at Ski Resort
+# Utilizing Meteorological Data with Supervised Learning to Predict Snowfall Amounts at Ski Resort
 **By Dustin Rapp**  
 
 --  
@@ -141,11 +141,12 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 | LXV WindSpeed m/s                          |     13.4  |      0.0    |      3.7  |   0.005 |       0.054 |     0.005 |     0.926 |       9.5 |
 
 ## Conclusion
-While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
+While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some 12-hr snowfall predictive ability predicting snowfall utilizing a very simple Ordinary Least Squares model  with these meteorological measurements.    Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg3NTQ3NjIyLC0yMDk3NDQ3OTc2LC02MT
-gxNjgyNzcsNzExNTU3MjQxLC0xMzE0MjQzNjQwLDE3ODg5OTYx
-MDAsLTE5MDQ4MjcyMDgsLTExOTUxMjYyODUsNjkwNDY1MTE0LD
-IxNDIzNTM0NzMsLTY5OTgwNTEzNyw3NTg3MTE0OF19
+eyJoaXN0b3J5IjpbNzk2NTg4NjI5LDg4NzU0NzYyMiwtMjA5Nz
+Q0Nzk3NiwtNjE4MTY4Mjc3LDcxMTU1NzI0MSwtMTMxNDI0MzY0
+MCwxNzg4OTk2MTAwLC0xOTA0ODI3MjA4LC0xMTk1MTI2Mjg1LD
+Y5MDQ2NTExNCwyMTQyMzUzNDczLC02OTk4MDUxMzcsNzU4NzEx
+NDhdfQ==
 -->
