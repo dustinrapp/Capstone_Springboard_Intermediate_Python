@@ -123,7 +123,7 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 
 **Table 3 - Output statistics from Linear Regression Analysis**  
 
-|                                                |       Max |       Min^[*] |          Mean^[*] |   Slope |   Std Error |   R Value |   P-value |   % Missing^[*] |
+|                                                |       Max |       Min^[] |          Mean^[] |   Slope |   Std Error |   R Value |   P-value |   % Missing |
 |------------------------------------------------|-----------|-----------|---------------|---------|-------------|-----------|-----------|-------------|
 | KCCU Dewpoint (deg C)                        |      0    |    -27    |     -9.7  |   0.085 |       0.03  |     0.171 |     0.005 |       21.9 |
 | KCCU CloudCover (oktas)                     |      8    |      0    |      7.4  |   0.145 |       0.085 |     0.142 |     0.089 |       57.1 |
@@ -144,8 +144,8 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTc0NDc5NzYsLTYxODE2ODI3Nyw3MT
-E1NTcyNDEsLTEzMTQyNDM2NDAsMTc4ODk5NjEwMCwtMTkwNDgy
-NzIwOCwtMTE5NTEyNjI4NSw2OTA0NjUxMTQsMjE0MjM1MzQ3My
-wtNjk5ODA1MTM3LDc1ODcxMTQ4XX0=
+eyJoaXN0b3J5IjpbODg3NTQ3NjIyLC0yMDk3NDQ3OTc2LC02MT
+gxNjgyNzcsNzExNTU3MjQxLC0xMzE0MjQzNjQwLDE3ODg5OTYx
+MDAsLTE5MDQ4MjcyMDgsLTExOTUxMjYyODUsNjkwNDY1MTE0LD
+IxNDIzNTM0NzMsLTY5OTgwNTEzNyw3NTg3MTE0OF19
 -->
