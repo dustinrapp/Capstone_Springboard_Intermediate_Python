@@ -14,7 +14,7 @@ The purpose of this report is to discuss data to be utilized and make general as
 
 
 ## Data
-The Copper Mountain ski resort is unique as there is an official SNOTEL National Resources Conservation Service monitoring station the north slope of Copper Mountain, where many popular ski runs are located. SNOTEL is an telemtry automated system of snowpack and related climate sensors in the Western United States. In addition to reporting hourly snowfall amounts, it also records temperature.  The Copper Mountain ski resort is also has an Colorado Department of Transportation Automated Weather Observing System (AWOS) which monitors a suite of hourly variables near the top of Copper Mountain.  Additionally, a National Weather Service Automated Surface Observing Station (ASOS) is located in Leadville, CO approximately 30 km to the northwest of Copper Mountain.  These three stations give a comprehensive meteorological dataset of surface variables in the vicinity of the Copper Mountain Resort.   **Table 1-1** gives a listing of all surface level meteorological variables by station. Hourly data for each station was downloaded for years 2005-2017 from online sources.  Data sources for each station are found in **Table 2**.  
+The Copper Mountain ski resort is unique as there is an official SNOTEL National Resources Conservation Service monitoring station the north slope of Copper Mountain, where many popular ski runs are located. SNOTEL is a telemetry automated system of snowpack and related climate sensors in the Western United States. In addition to reporting hourly snowfall amounts, it also records temperature.  The Copper Mountain ski resort is also has an Colorado Department of Transportation Automated Weather Observing System (AWOS) which monitors a suite of hourly variables near the top of Copper Mountain.  Additionally, a National Weather Service Automated Surface Observing Station (ASOS) is located in Leadville, CO approximately 30 km to the northwest of Copper Mountain.  These three stations give a comprehensive meteorological dataset of surface variables in the vicinity of the Copper Mountain Resort.   **Table 1-1** gives a listing of all surface level meteorological variables by station. Hourly data for each station was downloaded for years 2005-2017 from online sources.  Data sources for each station are found in **Table 2**.  
 
 
 A map showing the Copper Mountain SNOTEL site and the meteorological sites used in this assessment is also shown in **Figure 1**  
@@ -85,19 +85,19 @@ A table showing the total number of snowfall events, along with mean, max, and s
 
 **Table 3  Statistics on Snowfall Events To be Used in Analysis**  
 
-|   Year |   Number 12hr Snowfall Events >=3 |    Mean |   Median |   Max |   %Missing SnowDepth |   Std Deviation |
-|--------|-----------------------------------|---------|----------|-------|----------------------|-----------------|
-|   2006 |                                26 | 4.84615 |  4       |  11   |           0.0069167  |         1.87478 |
-|   2007 |                                29 | 3.94253 |  3.33333 |   6.5 |           0.00689688 |         1.17222 |
-|   2008 |                                27 | 4.46296 |  3.66667 |   8   |           0.0069065  |         1.8461  |
-|   2009 |                                27 | 4.25309 |  4       |  13   |           0.00694444 |         1.9172  |
-|   2010 |                                30 | 4.58333 |  4       |   9   |           0.00689688 |         1.74841 |
-|   2011 |                                32 | 4.34375 |  4       |   7   |           0.00693493 |         1.3786  |
-|   2012 |                                14 | 5.14286 |  4       |  10   |           0.00694444 |         2.29463 |
-|   2013 |                                32 | 4.2875  |  4       |  12   |           0.00694444 |         1.77566 |
-|   2015 |                                23 | 4.17391 |  4       |   8   |           0.00681126 |         1.23894 |
-|   2016 |                                32 | 4.90625 |  4       |  16   |           0.00694444 |         2.98286 |
-|   2017 |                                29 | 4.58621 |  3       |  16   |           0.00694444 |         2.81029 |
+|   Year |   Number 12hr Snowfall Events >=3 |   Mean |   Median |   Max |   %Missing SnowDepth |   Std Deviation |
+|--------|-----------------------------------|--------|----------|-------|----------------------|-----------------|
+|   2006 |                                26 |    4.8 |      4   |  11   |                 0.69 |            1.87 |
+|   2007 |                                29 |    3.9 |      3.3 |   6.5 |                 0.69 |            1.17 |
+|   2008 |                                27 |    4.5 |      3.7 |   8   |                 0.69 |            1.85 |
+|   2009 |                                27 |    4.3 |      4   |  13   |                 0.69 |            1.92 |
+|   2010 |                                30 |    4.6 |      4   |   9   |                 0.69 |            1.75 |
+|   2011 |                                32 |    4.3 |      4   |   7   |                 0.69 |            1.38 |
+|   2012 |                                14 |    5.1 |      4   |  10   |                 0.69 |            2.29 |
+|   2013 |                                32 |    4.3 |      4   |  12   |                 0.69 |            1.78 |
+|   2015 |                                23 |    4.2 |      4   |   8   |                 0.68 |            1.24 |
+|   2016 |                                32 |    4.9 |      4   |  16   |                 0.69 |            2.98 |
+|   2017 |                                29 |    4.6 |      3   |  16   |                 0.69 |            2.81
   
 
 ***
@@ -140,8 +140,8 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxODE2ODI3Nyw3MTE1NTcyNDEsLTEzMT
-QyNDM2NDAsMTc4ODk5NjEwMCwtMTkwNDgyNzIwOCwtMTE5NTEy
-NjI4NSw2OTA0NjUxMTQsMjE0MjM1MzQ3MywtNjk5ODA1MTM3LD
-c1ODcxMTQ4XX0=
+eyJoaXN0b3J5IjpbMjEwMTE3NzA3NywtNjE4MTY4Mjc3LDcxMT
+U1NzI0MSwtMTMxNDI0MzY0MCwxNzg4OTk2MTAwLC0xOTA0ODI3
+MjA4LC0xMTk1MTI2Mjg1LDY5MDQ2NTExNCwyMTQyMzUzNDczLC
+02OTk4MDUxMzcsNzU4NzExNDhdfQ==
 -->
