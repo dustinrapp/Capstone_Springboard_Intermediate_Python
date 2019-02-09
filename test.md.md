@@ -112,7 +112,7 @@ A table showing the total number of snowfall events, along with mean, max, and s
 
 ## Linear Regression Analysis  
 
-To assess snowfall prediction potential with Ordinary Least Squares model, a linear regression analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. While the R values are not notably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
+To assess snowfall prediction potential with Ordinary Least Squares model, a linear regression analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  The data are sorted by largest R value. Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. While the R values are not notably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
   
 
 ***
@@ -133,14 +133,14 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 | LXV Temperature (deg C)                       |     13.3  |    -17.2  |     -3.0 |   0.03  |       0.026 |     0.065 |     0.257 |       9.5 |
 | LXV Wind Direction (deg)                      |    360    |      0.0    |    184.1    |  -0.001 |       0.001 |    -0.055 |     0.336 |       0.095 |
 | CMtn Wind Direction (deg)                    |    360    |      0.0    |    236.5    |   0.002 |       0.002 |     0.044 |     0.48  |       0.243 |
-|LXV Pressure (hp)                            |   1028.5  |    983.3  |   1005.5     |  -0.011 |       0.015 |    -0.043 |     0.457 |       0.101 |
-| LXV WindSpeed m/s                          |     13.4  |      0.0    |      3.7  |   0.005 |       0.054 |     0.005 |     0.926 |       0.095 |
+|LXV Pressure (hp)                            |   1028.5  |    983.3  |   1005.5     |  -0.011 |       0.015 |    -0.043 |     0.457 |       10.1 |
+| LXV WindSpeed m/s                          |     13.4  |      0.0    |      3.7  |   0.005 |       0.054 |     0.005 |     0.926 |       9.5 |
 
 ## Conclusion
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some predictive ability predicting snowfall amounts over the next twelve hours utilizing a very simple Ordinary Least Squares model hourly meteorological measurements at the top of that twelve hour period.  Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU4MzE3ODM2LC0xMzE0MjQzNjQwLDE3OD
+eyJoaXN0b3J5IjpbMzM3NTY0MzE2LC0xMzE0MjQzNjQwLDE3OD
 g5OTYxMDAsLTE5MDQ4MjcyMDgsLTExOTUxMjYyODUsNjkwNDY1
 MTE0LDIxNDIzNTM0NzMsLTY5OTgwNTEzNyw3NTg3MTE0OF19
 -->
