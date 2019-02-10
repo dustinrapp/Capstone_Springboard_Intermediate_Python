@@ -21,15 +21,23 @@ A map showing the Copper Mountain SNOTEL site and the meteorological sites used 
   
   ***
 **Figure 1 - Map of Locations**  
-  
+ 
+fff  
+
+
 <p float="left">
-  <img src="https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png" width="300" />
-  <img src="https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png" width="300" /> 
-  <img src="https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/blob/master/figs/KLXV.png" width="300" />
+  <img src="figs/KCCU_and_SNOTEL_map.png" width="600" />
 </p>
   
 
-***
+<p float="left">
+  <img src="figs/KLXV.png" width="600" />
+</p>
+  
+  
+  
+
+  
 
 
 **Table 1 - Meteorological Variables by Station**  
@@ -65,7 +73,7 @@ The following cleanup steps were performed on this dataset:
  - Missing values (e.g. 9999 values) were translated to NaN values.
  -  Missing data for all variables was linearly interpolated for time periods where 3 hours or less of data was missing. 
 
-The data was plotted to see if there were any extreme values warranting removal. It was noted that some of the KCCU data (especially temperature) did not demonstrate as much of a diurnal variation as the KXLV station.  These data are considered suspicious but were not removed from the dataset.  A more robust quality control of this dataset is outside the scope of this prelimiaryn study, but should be considered for future studies.
+The data was plotted to see if there were any extreme values warranting removal. It was noted that some of the KCCU data (especially temperature) did not demonstrate as much of a diurnal variation as the KXLV station.  These data are considered suspicious but were not removed from the dataset.  A more robust quality control of this dataset is outside the scope of this preliminary study, but should be considered for future studies.
 
 A small amount of anomalous data was observed in the SNOTEL snow depth data and was removed.  These physically unrealistic readings (e.g. spikes in some of the snow depth data or snowdepth reports which occur when temperatures did not support snowfall) were removed as well as extreme negative values. 
 
@@ -110,10 +118,15 @@ A table showing the total number of snowfall events, along with mean, max, and s
  
 
 
-![alt text](https://github.com/dustinrapp/Capstone_Springboard_Intermediate_Python/\Capstone\MS_CS_report\figsfigs/snowdepth_snowfall.png)
+  
+<p float="left">
+  <img src="figs/snowdepth_snowfall.png" width="1000" />
+</p>
+  
 
 
 
+  
 ## Linear Regression Analysis  
 
 To assess snowfall prediction potential with Ordinary Least Squares model, a linear regression analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  The data are sorted by largest R value. Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. Though Cloud Cover does have higher R values as well, the p values and amount of data missing is also very high. While the R values are not notably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
@@ -143,10 +156,3 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 ## Conclusion
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some 12-hr snowfall predictive ability predicting snowfall utilizing a very simple Ordinary Least Squares model  with these meteorological measurements.    Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNzcxNzk4MCw3OTY1ODg2MjksODg3NT
-Q3NjIyLC0yMDk3NDQ3OTc2LC02MTgxNjgyNzcsNzExNTU3MjQx
-LC0xMzE0MjQzNjQwLDE3ODg5OTYxMDAsLTE5MDQ4MjcyMDgsLT
-ExOTUxMjYyODUsNjkwNDY1MTE0LDIxNDIzNTM0NzMsLTY5OTgw
-NTEzNyw3NTg3MTE0OF19
--->
