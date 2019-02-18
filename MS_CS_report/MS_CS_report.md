@@ -18,15 +18,14 @@ The Copper Mountain ski resort is unique as there is an official SNOTEL National
 These three stations give a comprehensive meteorological dataset of surface variables in the vicinity of the Copper Mountain Resort.   **Table 1** gives a listing of all surface level meteorological variables by station. Hourly data for each station was downloaded for years 2005-2017 from online sources.  Data sources for each station are found in **Table 2**.  A map showing the Copper Mountain SNOTEL site and the meteorological sites used in this assessment is also shown in **Figure 1**  
   
 
-**Table 1 - Meteorological Variables by Station**
+**Table 1 - Meteorological Variables by Station**  
 
-|**Station ID/Num** | SNOTEL 415    | KLXV       | KCCU           |
-|:---------------:|:---------------:|:----------------:|:----------------:| 
-|**Station ID/Num** | SNOTEL 415    | KLXV       | KCCU           |
-|**Station Type**   | SNOTEL    | ASOS           |      AWOS      |
-|**Elevation**      | 10550'        | 9938'     | 12075    | 
-|**Variables**     | Temperature <br> Snow Depth |  Dewpoint <br> Wind Speed <br> Wind Direction <br> Cloud Cover   | Dewpoint <br> Wind Speed <br> Wind Direction <br> Cloud Cover |
-| **Data Source**   |  National Resources <br> Conservation Service <br> (www.NRCS.gov)  | National Climatic <br> Data Center <br> ISHD Lite format <br> (www.NCDC.gov) |  National Climatic <br> Data Center <br> ISHD Lite format <br> (www.NCDC.gov) |
+|**Station ID/Num** |**Station Type**   |**Elevation**   |**Variables**     | **Data Source**   |  
+|:-----------------:|:-----------------:|:--------------:|:----------------:|:-----------------:|
+| **SNOTEL 415**    | SNOTEL    |10550'     | Temperature <br> Snow Depth       |   National Resources <br> Conservation Service <br> (www.NRCS.gov)
+| **KLXV**          | ASOS      |12075      | Wind Speed <br> Wind Direction <br> Cloud Cover| National Climatic <br> Data Center <br> ISHD Lite format <br> (www.NCDC.gov) 
+| **KCCU**          | AWOS      |10550'     | Dewpoint <br> W<br> Wind Speed <br> Wind Direction <br> Cloud Cover| National Climatic <br> Data Center <br> ISHD Lite format <br> (www.NCDC.gov) 
+
 
   
 
