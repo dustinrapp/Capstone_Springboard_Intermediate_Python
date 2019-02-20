@@ -1,4 +1,3 @@
-
 ## Milestone Capstone:  
 # Utilizing Meteorological Data with Supervised Learning to Predict Snowfall Amounts at Ski Resort
 **By Dustin Rapp**  
@@ -14,44 +13,23 @@ The purpose of this report is to discuss data to be utilized and make general as
 
 
 ## Data
-The Copper Mountain ski resort is unique as there is an official SNOTEL National Resources Conservation Service monitoring station the north slope of Copper Mountain, where many popular ski runs are located. SNOTEL is a telemetry automated system of snowpack and related climate sensors in the Western United States. In addition to reporting hourly snowfall amounts, it also records temperature.  The Copper Mountain ski resort is also has an Colorado Department of Transportation Automated Weather Observing System (AWOS) which monitors a suite of hourly variables near the top of Copper Mountain.  Additionally, a National Weather Service Automated Surface Observing Station (ASOS) is located in Leadville, CO approximately 30 km to the northwest of Copper Mountain.  These three stations give a comprehensive meteorological dataset of surface variables in the vicinity of the Copper Mountain Resort.   **Table 1-1** gives a listing of all surface level meteorological variables by station. Hourly data for each station was downloaded for years 2005-2017 from online sources.  Data sources for each station are found in **Table 2**.  
+The Copper Mountain ski resort is unique as there is an official SNOTEL National Resources Conservation Service monitoring station the north slope of Copper Mountain, where many popular ski runs are located. SNOTEL is a telemetry automated system of snowpack and related climate sensors in the Western United States. In addition to reporting hourly snowfall amounts, it also records temperature.  The Copper Mountain ski resort is also has an Colorado Department of Transportation Automated Weather Observing System (AWOS) which monitors a suite of hourly variables near the top of Copper Mountain.  Additionally, a National Weather Service Automated Surface Observing Station (ASOS) is located in Leadville, CO approximately 30 km to the northwest of Copper Mountain.  The SNOTEL si referencenced as SNOTEL, K
 
-
-A map showing the Copper Mountain SNOTEL site and the meteorological sites used in this assessment is also shown in **Figure 1**  
+These three stations give a comprehensive meteorological dataset of surface variables in the vicinity of the Copper Mountain Resort.   **Table 1** gives a listing of all surface level meteorological variables by station. Hourly data for each station was downloaded for years 2005-2017 from online sources.  Data sources for each station are found in **Table 2**.  A map showing the Copper Mountain SNOTEL site and the meteorological sites used in this assessment is also shown in **Figure 1**  
   
-  ***
-**Figure 1 - Map of Locations**  
- 
-fff  
-
-
-<p float="left">
-  <img src="figs/KCCU_and_SNOTEL_map.png" width="600" />
-</p>
-  
-
-<p float="left">
-  <img src="figs/KLXV.png" width="600" />
-</p>
-  
-  
-  
-
-  
-
 
 **Table 1 - Meteorological Variables by Station**  
-  
-| SNOTEL        | LXV ASOS       | KCCU AWOS      |        
-|     :---:     |     :---:      |       ---:     |
-| Temperature   | Temperature    | Temperature    |
-| Snow Depth    | Dewpoint       | Dewpoint       |
-|               | Wind Speed     | Wind Speed     |  
-|               | Wind Direction | Wind Direction | 
-|               | Cloud Cover    | Cloud Cover    | 
+
+|**Station ID/Num** |**Station Type**   |**Elevation**   |**Variables**     | **Data Source**   |  
+|:-----------------:|:-----------------:|:--------------:|:----------------:|:-----------------:|
+| **SNOTEL 415**    | SNOTEL    |10550'     | Temperature <br> Snow Depth       |   National Resources <br> Conservation Service <br> (www.NRCS.gov)
+| **KLXV**          | ASOS      |12075      | Wind Speed <br> Wind Direction <br> Cloud Cover| National Climatic <br> Data Center <br> ISHD Lite format <br> (www.NCDC.gov) 
+| **KCCU**          | AWOS      |10550'     | Dewpoint <br> W<br> Wind Speed <br> Wind Direction <br> Cloud Cover| National Climatic <br> Data Center <br> ISHD Lite format <br> (www.NCDC.gov) 
+
+
   
 
-***
+***  
 
 **Table 2 - Sources of Meteorological Data.** 
 
@@ -60,6 +38,25 @@ fff
 |  SNOTEL | National Resources Conservation Service (www.NRCS.gov)                |   
 |LXV ASOS | National Climatic Data Center - ISHD Lite format (www.NCDC.gov)     |
 |KCCU AWOS| National Climatic Data Center (ISHD format) (www.NCDC.gov)          |
+
+
+  ***
+**Figure 1 - Map of SNOTEL and KCCU Station Locations at Copper Mountain Ski Report**  
+
+ 
+KXLV site relative to Copper Mountain Ski Resort            |  Relative locations of the SNOTEL and KCCU sites at the Copper Mountain Ski Resort |
+:---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
+![](figs/KLXV.png)                                          |  ![](figs/KCCU_and_SNOTEL_map.png)                                                   
+
+
+  
+
+  
+
+
+
+
+
 
 ## Data and Wrangling Cleaning
 
@@ -95,22 +92,23 @@ A table showing the total number of snowfall events, along with mean, max, and s
 ***
 
 
-**Table 3  Statistics on Snowfall Events To be Used in Analysis**  
+**Table 3  Annual Statistics of 12-hr Snowfall Events (>=3")**  
 
-|   Year |   Number 12hr Snowfall Events >=3 |   Mean |   Median |   Max |   %Missing SnowDepth |   Std Deviation |
-|--------|-----------------------------------|--------|----------|-------|----------------------|-----------------|
-|   2006 |                                26 |    4.8 |      4   |  11   |                 0.69 |            1.87 |
-|   2007 |                                29 |    3.9 |      3.3 |   6.5 |                 0.69 |            1.17 |
-|   2008 |                                27 |    4.5 |      3.7 |   8   |                 0.69 |            1.85 |
-|   2009 |                                27 |    4.3 |      4   |  13   |                 0.69 |            1.92 |
-|   2010 |                                30 |    4.6 |      4   |   9   |                 0.69 |            1.75 |
-|   2011 |                                32 |    4.3 |      4   |   7   |                 0.69 |            1.38 |
-|   2012 |                                14 |    5.1 |      4   |  10   |                 0.69 |            2.29 |
-|   2013 |                                32 |    4.3 |      4   |  12   |                 0.69 |            1.78 |
-|   2015 |                                23 |    4.2 |      4   |   8   |                 0.68 |            1.24 |
-|   2016 |                                32 |    4.9 |      4   |  16   |                 0.69 |            2.98 |
-|   2017 |                                29 |    4.6 |      3   |  16   |                 0.69 |            2.81
-  
+|   Year    |  Number 12hr Snowfall Events >=3  |  Mean  |  Median  |  Max  |  Std Deviation  |  %Missing SnowDepth  |
+|  :----:   | :-------------------------------: | :----: | :------: | :---: | :-------------: | :------------------: |
+|   2006    |                26                 |  4.8   |    4     |  11   |      1.87       |         0.69         |
+|   2007    |                29                 |  3.9   |   3.3    |  6.5  |      1.17       |         0.69         |
+|   2008    |                27                 |  4.5   |   3.7    |   8   |      1.85       |         0.69         |
+|   2009    |                27                 |  4.3   |    4     |  13   |      1.92       |         0.69         |
+|   2010    |                30                 |  4.6   |    4     |   9   |      1.75       |         0.69         |
+|   2011    |                32                 |  4.3   |    4     |   7   |      1.38       |         0.69         |
+|   2012    |                14                 |  5.1   |    4     |  10   |      2.29       |         0.69         |
+|   2013    |                32                 |  4.3   |    4     |  12   |      1.78       |         0.69         |
+|   2015    |                23                 |  4.2   |    4     |   8   |      1.24       |         0.68         |
+|   2016    |                32                 |  4.9   |    4     |  16   |      2.98       |         0.69         |
+|   2017    |                29                 |  4.6   |    3     |  16   |      2.81       |         0.69         |
+| 2013-2017 |                338                |  4.6   |    4     |  16   |      2.12       |         0.69         |
+
 
 ***
 
@@ -120,7 +118,7 @@ A table showing the total number of snowfall events, along with mean, max, and s
 
   
 <p float="left">
-  <img src="figs/snowdepth_snowfall.png" width="1000" />
+  <img src="figs/snowdepth_snowfall.png" width="1500" />
 </p>
   
 
@@ -129,15 +127,15 @@ A table showing the total number of snowfall events, along with mean, max, and s
   
 ## Linear Regression Analysis  
 
-To assess snowfall prediction potential with Ordinary Least Squares model, a linear regression analysis was performed on each dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  The data are sorted by largest R value. Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. Though Cloud Cover does have higher R values as well, the p values and amount of data missing is also very high. While the R values are not notably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model.
+To assess snowfall prediction potential with Ordinary Least Squares (OLS) model, a linear regression analysis was performed on each feature in the dataset.  For each potential variable, data was plotted against snowfall amounts which would occur over the next 12 hours.    Slope, standard error, R square values, along with p values were calculated for all variables.  A table showing results from this analysis are shown in **Table 3**.  The data are sorted by largest R value. Note that the variables with the best predictive capabilities are dewpoint, KCCU Wind Speed, and pressure changes. Though Cloud Cover does have higher R values as well, the p values and amount of data missing is also very high. While the R values are not notably high (all are less then 0.2), p values for dewpoint, 12-hr pressure change are less then 0.05, indicating that there may be some predictive skill with an OLS model. It is also important to note that that cloud cover is a categorical variable (values are in integers from 0 to 8) and wind direction is a circular variables (values range from 0 to 360 degrees) and do not lend themselves well to linear regression type statistics. 
   
 
 ***
 
 **Table 3 - Output statistics from Linear Regression Analysis**  
 
-|                                                |       Max |       Min^[] |          Mean^[] |   Slope |   Std Error |   R Value |   P-value |   % Missing |
-|------------------------------------------------|-----------|-----------|---------------|---------|-------------|-----------|-----------|-------------|
+|                                                |       Max |       Min[1] |          Mean^[] |   Slope |   Std Error |   R Value |   P-value |   % Missing |
+|:------------------------------------------------|-----------|-----------|---------------|---------|-------------|-----------|-----------|-------------|
 | KCCU Dewpoint (deg C)                        |      0    |    -27    |     -9.7  |   0.085 |       0.03  |     0.171 |     0.005 |       21.9 |
 | KCCU CloudCover (oktas)                     |      8    |      0    |      7.4  |   0.145 |       0.085 |     0.142 |     0.089 |       57.1 |
 | LXV Dewpoint (deg C)                          |      2.8  |    -22.8  |     -8.1  |   0.074 |       0.031 |     0.134 |     0.019 |       9.5 |
@@ -151,7 +149,11 @@ To assess snowfall prediction potential with Ordinary Least Squares model, a lin
 | LXV Wind Direction (deg)                      |    360    |      0.0    |    184.1    |  -0.001 |       0.001 |    -0.055 |     0.336 |       0.095 |
 | CMtn Wind Direction (deg)                    |    360    |      0.0    |    236.5    |   0.002 |       0.002 |     0.044 |     0.48  |       0.243 |
 |LXV Pressure (hp)                            |   1028.5  |    983.3  |   1005.5     |  -0.011 |       0.015 |    -0.043 |     0.457 |       10.1 |
-| LXV WindSpeed m/s                          |     13.4  |      0.0    |      3.7  |   0.005 |       0.054 |     0.005 |     0.926 |       9.5 |
+| LXV WindSpeed (m/s)                          |     13.4  |      0.0    |      3.7  |   0.005 |       0.054 |     0.005 |     0.926 |       9.5 |  
+  
+  
+[1] test                    iigggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggkjggggggggggggggggggggggggggg  
+[2] sdfs sdfsf           sdfsdf sdfsfsfs dsddddddddddddddddddddddddddddddddfdsfsf
 
 ## Conclusion
 While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some 12-hr snowfall predictive ability predicting snowfall utilizing a very simple Ordinary Least Squares model  with these meteorological measurements.    Additional data sources, such as upper air measurements could be utilized to improve predictive ability.  
