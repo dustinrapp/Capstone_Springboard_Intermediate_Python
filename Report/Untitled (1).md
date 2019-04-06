@@ -200,6 +200,8 @@ There
 Utilizing the statsmodel api with the meteorological datasets, the OLS function was utilized to determine best fit parameters for a OLS model. To train the model, years 2006 and 2017 were used as the testing set, while years (2007-2018) of the meteorological datasets were used as the traiing set. Two different analyses were performed - one only utilizing surface meteorological variables, and the other utilizing both upper air and surface variables. A forward stepwise approach was used using the adjusted R squared value as the metric to determine the best combination of coefficient. To perform forward stepwise iternations, model was first fitted containing a single predictors. Predictors are then added to the model, one at the time. The adjusted R squared value is calcuated at each step, and the variable that gave the greatest additional improvement to the fit is added to the model. At the end of the steps, the combination of predictors which gave the highest predictive value to the model will have been found.
 
 
+### Table 1 - OLS Model Statistics Using Partition 1
+
 |OLS Model                    |  R-squared  |  Adj. R-squared: |   F-statistic:  |    Prob (F-statistic):  |  Log-Likelihood:  |  AIC:  | BIC:   | Combination of Best Fit Features in  OLS  |
 |:---------------------------:|:-----------:|:----------------:|:---------------:|:-----------------------:|:-----------------:|:------:|:------:|:--------------------------------------------------------------------------------------------:|
 |Surface Data Only  P1        |  0.060      | 0.044            |   3.765         |0.0118                   |  -371.85          | 751.7  |  1019  |  LXV_12hr_delta_Pressure_hp, CMtn_Dewpoint_degC, CMtn_WindSpeed_mps |
@@ -208,7 +210,7 @@ Utilizing the statsmodel api with the meteorological datasets, the OLS function 
   
   
 
-# OLS Model Training/Test Data Partition 1 -------------------------------------------------------------------------------------------------------------
+# OLS Model Training/Test Data Partition A -------------------------------------------------------------------------------------------------------------
 
 
 
@@ -216,29 +218,34 @@ Utilizing the statsmodel api with the meteorological datasets, the OLS function 
 
 
 ***  
-***  
-**Figure 1**
+*** 
 
-Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+### Figure 3 - OLS With Partition A: Predicted vs Actual Snowfall Amounts
+
+**(a) Surface Data Only**                                         |  **(b) Surface Data + Upper Air Data**                                                  |
 :---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
 ![](figs/pred_vs_act_SFC_5c.png)                               |  ![](figs/pred_vs_act_UASFC_6c.png)  
   
+*** 
   
-***  
+### Figure 4- OLS With Partition A: QQ Plot of Residuals
 
-            |  Surface Data + Upper Air Data                                                     |
+**(a) Surface Data Only**                                         |  **(b)  Surface Data + Upper Air Data** 
 :---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
 ![](figs/qq_resid_SFC_5c.png)                                  |  ![](figs/qq_resid_UASFC_6c.png)  
   
+*** 
 
-***  
-Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+### Figure 5 - OLS With Partition A: Residuals vs Predicted Snowfall
+**(a) Surface Data Only**                                         |  **(b)  Surface Data + Upper Air Data**                                                |
 :---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
 ![](figs/resid_vs_pred_SFC_5c.png)                             |  ![](figs/resid_vs_pred_UASFC_6c.png)
 
 
 ***  
-Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+
+### Figure 6 - OLS With Partition A: Histogram of Residuals
+**(a) Surface Data Only**                                         |  **(b)  Surface Data + Upper Air Data**                                           |  
 :---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
 ![](figs/hist_actual_minus_pred_SFC_5c.png)                 | ![](figs/hist_actual_minus_pred_UASFC_6c.png)
  
