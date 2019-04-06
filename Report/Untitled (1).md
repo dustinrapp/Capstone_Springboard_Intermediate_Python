@@ -197,21 +197,13 @@ There
 
 
 
-tilizing the statsmodel api with the meteorological datasets, the OLS function was utilized to determine best fit parameters for a OLS model. To train the model, the last 10 years (2008-2017) of the meteorological datasets were used. The first two years of meteorological data (2006-2007) was used as the test test set. Two different analyses were performed - one only utilizing surface meteorological variables, and the other utilizing both upper air and surface variables. A forward stepwise approach was used using the adjusted R squared value as the metric to determine the best combination of coefficient. To perform forward stepwise iternations, model was first fitted containing a single predictors. Predictors are then added to the model, one at the time. The adjusted R squared value is calcuated at each step, and the variable that gave the greatest additional improvement to the fit is added to the model. At the end of the steps, the combination of predictors which gave the highest predictive value to the model will have been found.
-
-It was observed that instability in the model arose whenver variables with low data capture wer
-### Surface Data Only  
+Utilizing the statsmodel api with the meteorological datasets, the OLS function was utilized to determine best fit parameters for a OLS model. To train the model, years 2006 and 2017 were used as the testing set, while years (2007-2018) of the meteorological datasets were used as the traiing set. Two different analyses were performed - one only utilizing surface meteorological variables, and the other utilizing both upper air and surface variables. A forward stepwise approach was used using the adjusted R squared value as the metric to determine the best combination of coefficient. To perform forward stepwise iternations, model was first fitted containing a single predictors. Predictors are then added to the model, one at the time. The adjusted R squared value is calcuated at each step, and the variable that gave the greatest additional improvement to the fit is added to the model. At the end of the steps, the combination of predictors which gave the highest predictive value to the model will have been found.
 
 
-### Surface + Upper Air Data  
-
-
-## Decision Tree Regressor Model  
-
-
-## Conclusion  
-
-While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some 12-hr snowfall predictive ability predicting snowfall utilizing a very simple Ordinary Least Squares model with only meteorological measurements - especially dewpoint and 12-hr pressure changes. There is recognition that snowfall is a very complex variable to forecast, and a simple OLS model may have limitations. Snowfall amounts can dependent on a variety of factors including snow water equivalent, temperature during crystal formation in the upper atmosphere, along with melting/freezing activity as snowflakes fall to the surface.  Upper air data may be helpful in overcoming some of these complexities and limitations, and my be integrated in this analysis.  Despite the complexities of a snowfall prediction, an OLS model is a good starting point to begin to understand how data science techniques could be utilized. 
+|OLS Model                    |  R-squared  |  Adj. R-squared: |   F-statistic:  |    Prob (F-statistic):  |  Log-Likelihood:  |  AIC:  | BIC:   | Combination of Best Fit Features in  OLS  |
+|:---------------------------:|:-----------:|:----------------:|:---------------:|:-----------------------:|:-----------------:|:------:|:------:|:--------------------------------------------------------------------------------------------:|
+|Surface Data Only  P1        |  0.060      | 0.044            |   3.765         |0.0118                   |  -371.85          | 751.7  |  1019  |  LXV_12hr_delta_Pressure_hp, CMtn_Dewpoint_degC, CMtn_WindSpeed_mps |
+| Surface+Upper Air Data P1   | 0.191       |   0.129          |      3.087      |0.000606                 |  -341.66          | 709.3   | 750.1  | KGJT_d400_250_dwpc, CMtnSNTL_Temp_degC, LXV_12hr_delta_Pressure_hp, KGJT_d400_200_dwpc, <br> KGJT_700mb_drct, KGJT_d500_300_drct, CMtn_Dewpoint_degC, KGJT_250mb_tmpc, <br> KGJT_d250_200_dwpc, KGJT_d300_250_drct, KGJT_d400_200_tmpc, CMtn_WindSpeed_mps, KGJT_d500_400_height_m  |
 
   
   
@@ -220,15 +212,12 @@ While not large, there are some significant relationships between some meteorolo
 
 
 
-|OLS Model                    |  R-squared  |  Adj. R-squared: |   F-statistic:  |    Prob (F-statistic):  |  Log-Likelihood:  |  AIC:  | BIC:   | Combination of Best Fit Features in  OLS  |
-|:---------------------------:|:-----------:|:----------------:|:---------------:|:-----------------------:|:-----------------:|:------:|:------:|:--------------------------------------------------------------------------------------------:|
-|Surface Data Only  P1        |  0.060      | 0.044            |   3.765         |0.0118                   |  -371.85          | 751.7  |  1019  |  LXV_12hr_delta_Pressure_hp, CMtn_Dewpoint_degC, CMtn_WindSpeed_mps |
-| Surface+Upper Air Data P1   | 0.191       |   0.129          |      3.087      |0.000606                 |  -341.66          | 709.3   | 750.1  | KGJT_d400_250_dwpc, CMtnSNTL_Temp_degC, LXV_12hr_delta_Pressure_hp, KGJT_d400_200_dwpc, <br> KGJT_700mb_drct, KGJT_d500_300_drct, CMtn_Dewpoint_degC, KGJT_250mb_tmpc, <br> KGJT_d250_200_dwpc, KGJT_d300_250_drct, KGJT_d400_200_tmpc, CMtn_WindSpeed_mps, KGJT_d500_400_height_m  |
+
 
 
 ***  
 ***  
-
+**Figure 1**
 
 Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
 :---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
@@ -236,7 +225,8 @@ Surface Data Only                                           |  Surface Data + Up
   
   
 ***  
-Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+
+            |  Surface Data + Upper Air Data                                                     |
 :---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
 ![](figs/qq_resid_SFC_5c.png)                                  |  ![](figs/qq_resid_UASFC_6c.png)  
   
@@ -253,28 +243,6 @@ Surface Data Only                                           |  Surface Data + Up
 ![](figs/hist_actual_minus_pred_SFC_5c.png)                 | ![](figs/hist_actual_minus_pred_UASFC_6c.png)
  
 
-
-# Decision Tree ------------------------------------------------------------------------------------
-
-Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
-:---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
-![](figs/TREE_pred_vs_residuals_SFC_5c.png)                    |  ![](figs/TREE_pred_vs_residuals_UASFC_5c.png)  
-
-*** 
-
-Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
-:---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
-![](figs/TREE_pred_vs_act_SFC_5c.png)                               |  ![](figs/TREE_pred_vs_act_UASFC_5c.png)  
-
-***  
-
-
-Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
-:---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
-![](figs/TREE_depth_vs_mse_SFC_5c.png)                               |  ![](figs/TREE_depth_vs_mse_UASFC_5c.png)  
-
-***  
-***  
   
   
   
@@ -301,7 +269,7 @@ Surface Data Only                                           |  Surface Data + Up
 ** Figure 1  **
 
 
-Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+**Figure 1a - Partition 1 Surface Data Only**               |  **Figure 1a - Partition 1 Surface Data + Upper Air Data**                         |
 :----------------------------------------------------------:|:----------------------------------------------------------------------------------:|
 ![](figs/pred_vs_act_SFC_5d.png)                               |  ![](figs/pred_vs_act_UASFC_6d.png)  
   
@@ -380,6 +348,21 @@ Surface Data Only                                           |  Surface Data + Up
   
 
 
+### Surface Data Only  
+
+
+### Surface + Upper Air Data  
+
+
+## Decision Tree Regressor Model  
+
+
+## Conclusion  
+
+While not large, there are some significant relationships between some meteorological variables and snowfall amount when snowfall does occur.  It is anticipated that there may be some 12-hr snowfall predictive ability predicting snowfall utilizing a very simple Ordinary Least Squares model with only meteorological measurements - especially dewpoint and 12-hr pressure changes. There is recognition that snowfall is a very complex variable to forecast, and a simple OLS model may have limitations. Snowfall amounts can dependent on a variety of factors including snow water equivalent, temperature during crystal formation in the upper atmosphere, along with melting/freezing activity as snowflakes fall to the surface.  Upper air data may be helpful in overcoming some of these complexities and limitations, and my be integrated in this analysis.  Despite the complexities of a snowfall prediction, an OLS model is a good starting point to begin to understand how data science techniques could be utilized. 
+
+
+
 # Decision Tree ------------------------------------------------------------------------------------
 
 Surface Data Only                                           | Surface Data + Upper Air Data                                                     |
@@ -410,5 +393,29 @@ Surface Data Only                                           |  Surface Data + Up
 
 ![](figs/TREE_DecisionTree_UASFC.png)  
 
+
+
+
+# Decision Tree ------------------------------------------------------------------------------------
+
+Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+:---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
+![](figs/TREE_pred_vs_residuals_SFC_5c.png)                    |  ![](figs/TREE_pred_vs_residuals_UASFC_5c.png)  
+
+*** 
+
+Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+:---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
+![](figs/TREE_pred_vs_act_SFC_5c.png)                               |  ![](figs/TREE_pred_vs_act_UASFC_5c.png)  
+
+***  
+
+
+Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+:---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
+![](figs/TREE_depth_vs_mse_SFC_5c.png)                               |  ![](figs/TREE_depth_vs_mse_UASFC_5c.png)  
+
+***  
+*** 
 
 
