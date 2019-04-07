@@ -45,6 +45,32 @@
 **(c) OLS With Partition B: Surface Data Only**                                         |  **(d) OLS With Partition B: Surface Data + Upper Air Data**
 :---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
 ![](figs/hist_actual_minus_pred_SFC_5d.png)                 | ![](figs/hist_actual_minus_pred_UASFC_6d.png)
-*** 
+***  
+***  
+### Figure 7 - Cross Validation Predicted vs Actual Snowfall Amounts
+
+**(a) Best Features of Partition A OLS: Surface Data Only**   | **(b)  Best Features of Partition A OLS: Surface Data + Upper Air Data**                                           | 
+:----------------------------------------------------------:|:----------------------------------------------------------------------------------:|
+![](figs/pred_vs_act_KFold_SFC_P1.png)                      |  ![](figs/pred_vs_act_KFold_UASFC_P1.png)  
+  
+  
+***  
+Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+:---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
+![](figs/qq_resid_KFold_SFC_P1.png)                         |  ![](figs/qq_resid_KFold_UASFC_P1.png)  
+  
+
+***  
+Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+:---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
+![](figs/resid_vs_pred_KFold_SFC_P1.png)                        |  ![](figs/resid_vs_pred_KFold_UASFC_P1.png)
+
+
+***  
+Surface Data Only                                           |  Surface Data + Upper Air Data                                                     |
+:---------------------------------------------------------- |:----------------------------------------------------------------------------------:|
+![](figs/hist_actual_minus_pred_KFold_SFC_P1.png)               | ![](figs/hist_actual_minus_pred_KFold_UASFC_P1.png)  
+
+
 
 
