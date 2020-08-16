@@ -1,0 +1,19 @@
+Here are a list of potential capstone ideas:
+
+1.) Problem to solve:  Ski resort operations are very dependent on snow forecasts.  Accurate forecasts that are unique to a ski resort based on local meteorological conditions could be beneficial financially to the resort. 
+    How: Utilize Copper Mountain, CO hourly meteorology, along with nearby daily SNOTEL snowfall data to forecast how much snow will fall in a given day using machine learning or statistical techniques
+    Data Sources: 
+        -Hourly meteorological data (temp, humidity, wind speed/direction) from the National Climatic Data Center for Copper Mountain, Co station: https://www.ncdc.noaa.gov/isd
+        - Daily Snowfall data from the National Resource Conservation Service fo Copper Mountain, CO station: (https://wcc.sc.egov.usda.gov/nwcc/site?sitenum=415)
+
+2.) Problem to solve: Air Quality in Denver is important information for the public to know, especially persons with health concerns.  Accurate air quality forecasts are important – forecasting local conditions using past trends could be a method to do this.
+    How:  Utilize ozone data from a Denver monitoring station and data at meteorological stations to predict ozone air quality using machine learning or statistical techniques 
+    Data Sources: 
+         -Daily ozone data measurements: https://www.epa.gov/outdoor-air-quality-data https://www.epa.gov/outdoor-air-quality-data  
+          -Hourly meteorological data (temp, humidity, wind speed/direction) for Denver, CO from the National Climatic Data Center: https://www.ncdc.noaa.gov/isd         
+  
+3.) Problem to solve:  Flood potential is very important for those living in flood plains.  Accurately being able to predict severity of floods gives people time to prepare.
+    How: Utilize hourly meteorological data to forecast daily river stage based on previous meteorological and river stage measurements using machine learning or statistical techniques
+    Data Sources: 
+        -Daily River Stage Measurements from US Geological Survey (USGS) for Chester, IL: https://waterdata.usgs.gov/il/nwis/dv/?site_no=07020500&agency_cd=USGS&amp;referred_module=sw
+         -Hourly meteorological data (temp, humidity, wind speed/direction) for Sparta, IL from the National Climatic Data Center: https://www.ncdc.noaa.gov/isd         
